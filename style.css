@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 :root{
     --font-family:"Noto Serif", serif;
     --fontdos-family: "Luxurious Roman", serif;
+    --fonttres-family: "Cinzel", serif;
+    --fontcuatro-family: "Quicksand", sans-serif;
 }
 * {
     padding: 0;
@@ -136,6 +140,7 @@ body {
 #presentacionServicio{
     width: 100%;
     height: 50%;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 }
 
 /*Bloque de ubicacion*/
@@ -146,20 +151,58 @@ body {
 }
 
 #maps{
-    margin: 15px auto;
-    padding: 2% 0% 0% 1%;
-    width: 50%;
-    height: auto;
-}
-.direccion{
-    font-family: var(--fontdos-family);
-    color: #FFF;
-    font-size: 2em;
-    width: 45%;
-    height: auto;
     margin: auto;
+    min-width: 300px;
+    max-width: 600px;
+    height: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0);
+    transition: transform 0.3s ease-in-out;
+}
+#maps:hover {
+    transform: scale(1.02);
 }
 
+.direccion{
+    font-family: var(--fontdos-family);
+    width: 45%;
+    height: 400px;
+    margin: auto;
+    border-radius: 15px;
+    text-align: center;
+}
+.textDireccion{
+    color: #ffffff;
+    font-family: var(--fonttres-family);
+    font-size: 2em;
+    padding: 7% 2%;
+}
+.DireccionDos{
+    font-size: 1.5em;
+    padding: 2%;
+    font-family: var(--fontcuatro-family);
+    color: #ffffff;
+}
+.btWaze{
+    margin: 15px auto;
+    background-color:#08b4f3 ;
+    width: 25%;
+    height: 60px;
+    text-decoration: none;
+    border-radius: 15px;
+}
+.icoWaze{
+    width: 140%;
+    margin: 10px -30px;
+}
+.btWaze:hover{
+    background-color: #08b4f3;
+    box-shadow: 0px 0px 10px rgb(0, 136, 255, 0.15);
+    transition: transform 0.3s ease-in-out;
+    transform: scale(0.8);
+    cursor: pointer;
+}
 /*Bloque dos IO-TECNIPLUS*/
 #presentacionDosSe{
     background-color: #ffff;
@@ -232,7 +275,7 @@ body {
     margin-bottom: 20px;
 }
 #slider li .content_slider{
-    background: rgba(0, 0, 0, 0.50);
+    background: rgba(0, 0, 0, 0.45);
     padding: 5px 0px;
 }
 .content_slider{
@@ -374,18 +417,35 @@ body {
     }
     #maps, .direccion {
         width: 50%;
+        height: 600px;
+        font-size: 1.5em;
+    }
+    #maps{
         height: 400px;
-        padding: 1px;
-        font-size: 2em;
+        margin: 15px 65px auto;
     }
     #blcUbicacion{
-        width: 90%;
+        width: 95%;
         height: auto;
         display: block;
     }
-
+    .btWaze{
+        margin: 20px auto;
+        background-color:#08b4f3 ;
+        width: 40%;
+        height: 85px;
+        text-decoration: none;
+        border-radius: 15px;
+    }
+    .icoWaze{
+        width: 140%;
+        margin: 5px -65px;
+    }
     #footer{
         width: 100%;
+    }
+    .copy{
+        font-size: 1.5em;
     }
 }
 
@@ -433,16 +493,32 @@ body {
 
     /*pagina contacto*/
     #maps, .direccion {
-        width: 50%;
+        width: 45%;
         height: 400px;
         padding: 1px;
+        font-size: 0.8em;
+    }
+    #maps{
+        height: 200px;
+        margin: 45px auto;
     }
     #blcUbicacion{
         width: 90%;
         height: auto;
         display: block;
     }
-
+    .btWaze{
+        margin: 20px auto;
+        background-color:#08b4f3 ;
+        width: 50%;
+        height: 60px;
+        text-decoration: none;
+        border-radius: 15px;
+    }
+    .icoWaze{
+        width: 150%;
+        margin: 2.8px -75px;
+    }
     /*Pie de pagina*/
 
     #footer{
@@ -479,12 +555,30 @@ body {
     #maps, .direccion {
         width: 50%;
         height: 400px;
-        padding: 1px;
+        font-size: 0.8em;
+        margin: 20px 0px 0px;
+        padding: 15px 0px 15px;
+    }
+    #maps{
+        height: auto;
+        margin: 15px auto;
     }
     #blcUbicacion{
         width: 90%;
         height: auto;
         display: block;
+    }
+    .btWaze{
+        margin: 20px auto;
+        background-color:#08b4f3 ;
+        width: 55%;
+        height: 60px;
+        text-decoration: none;
+        border-radius: 15px;
+    }
+    .icoWaze{
+        width: 140%;
+        margin: 5px -45px;
     }
 }
 
